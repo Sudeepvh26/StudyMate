@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyMate | Study Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">StudyMate<span>.</span></h2>
+
+            <p class="menu-title">MENU</p>
+
+            <nav>
+                <a href="#dashboard" class="nav-link active">🏠 Dashboard</a>
+                <a href="#timetable" class="nav-link">📅 Timetable</a>
+                <a href="#tasks" class="nav-link">✅ Study Tasks</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Stay consistent.</p>
+                <small>Small steps every day!</small>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content" id="dashboard">
+
+            <header class="topbar">
+                <div>
+                    <p class="greeting">YOUR PERSONAL STUDY PLANNER</p>
+                    <h1>Good day, Student! 👋</h1>
+                    <p class="subtitle">Plan your time. Reach your goals.</p>
+                </div>
+
+                <div class="date-box">
+                    <span>📆</span>
+                    <span id="current-date"></span>
+                </div>
+            </header>
+
+            <!-- Summary cards -->
+            <section class="stats">
+                <div class="stat-card purple">
+                    <span class="stat-icon">📚</span>
+                    <p>Total Classes</p>
+                    <h2 id="total-classes">0</h2>
+                </div>
+
+                <div class="stat-card green">
+                    <span class="stat-icon">✅</span>
+                    <p>Completed Tasks</p>
+                    <h2 id="completed-tasks">0</h2>
+                </div>
+
+                <div class="stat-card orange">
+                    <span class="stat-icon">🎯</span>
+                    <p>Pending Tasks</p>
+                    <h2 id="pending-tasks">0</h2>
+                </div>
+            </section>
+
+            <!-- Timetable -->
+            <section class="panel
