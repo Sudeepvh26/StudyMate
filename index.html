@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +34,7 @@
         <!-- Main content -->
         <main class="main-content" id="dashboard">
 
+            <!-- Header -->
             <header class="topbar">
                 <div>
                     <p class="greeting">YOUR PERSONAL STUDY PLANNER</p>
@@ -68,4 +70,131 @@
             </section>
 
             <!-- Timetable -->
-            <section class="panel
+            <section class="panel" id="timetable">
+                <div class="panel-header">
+                    <div>
+                        <h2>📅 Weekly Timetable</h2>
+                        <p class="subtitle">Organize your classes by day.</p>
+                    </div>
+
+                    <button type="button" id="open-class-form">
+                        + Add Class
+                    </button>
+                </div>
+
+                <!-- Day selector -->
+                <div class="day-selector" id="day-selector">
+                    <button type="button" class="day-btn active"
+                            data-day="Monday">Mon</button>
+                    <button type="button" class="day-btn"
+                            data-day="Tuesday">Tue</button>
+                    <button type="button" class="day-btn"
+                            data-day="Wednesday">Wed</button>
+                    <button type="button" class="day-btn"
+                            data-day="Thursday">Thu</button>
+                    <button type="button" class="day-btn"
+                            data-day="Friday">Fri</button>
+                    <button type="button" class="day-btn"
+                            data-day="Saturday">Sat</button>
+                    <button type="button" class="day-btn"
+                            data-day="Sunday">Sun</button>
+                </div>
+
+                <!-- Class list rendered by JavaScript -->
+                <div id="timetable-list"></div>
+
+                <!-- Add class form -->
+                <div id="class-form-container" class="hidden">
+                    <h3>Add a New Class</h3>
+
+                    <form id="class-form">
+                        <div class="form-group">
+                            <label for="class-name">Subject name *</label>
+                            <input
+                                type="text"
+                                id="class-name"
+                                placeholder="e.g. Data Structures"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="class-start">Start time *</label>
+                                <input
+                                    type="time"
+                                    id="class-start"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="class-end">End time *</label>
+                                <input
+                                    type="time"
+                                    id="class-end"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="class-room">Room / Location</label>
+                            <input
+                                type="text"
+                                id="class-room"
+                                placeholder="e.g. Room 201"
+                            >
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit">Save Class</button>
+                            <button type="button" id="cancel-class">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Study tasks -->
+            <section class="panel" id="tasks">
+                <div class="panel-header">
+                    <div>
+                        <h2>✅ Study Tasks</h2>
+                        <p class="subtitle">
+                            Keep track of what you need to finish.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Add task form -->
+                <form id="task-form" class="task-form">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Enter a study task..."
+                        aria-label="New study task"
+                        required
+                    >
+
+                    <button type="submit">+ Add Task</button>
+                </form>
+
+                <!-- Tasks rendered by JavaScript -->
+                <div id="task-list"></div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Made with 💜 StudyMate — Small steps every day!</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Load JavaScript after the HTML elements -->
+    <script src="script.js"></script>
+
+</body>
+</html>
